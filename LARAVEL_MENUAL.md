@@ -15,6 +15,31 @@ Laravel 8.4, PHP 7.4 기준입니다.
    - `vendor/` 디렉터리 포함 (composer install 완료됨)
    - `public/` 디렉터리 내 자산 포함 (프론트 자산 빌드 완료됨)
    - `.env` 파일 포함 (서버 환경에 맞게 설정됨)
+5. Laravel 프로젝트 셋팅 준비
+   - composer install --optimize-autoloader --no-dev
+	- npm run build (필요시, 프론트 자산 있는 경우)
+	- .env.production 파일 준비
+6. 서버 배포 파일 구성
+
+```
+laravel-app/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/         ← Vue/React 쓸 경우 필요
+├── routes/
+├── storage/           ← 퍼미션 설정 필요
+├── vendor/            ✅ 반드시 포함됨 (composer install 결과)
+├── .env               ✅ 서버 환경에 맞게 작성
+├── artisan
+├── composer.json
+├── package.json       ← 필요시
+```
+
+> ⚠️ vendor/는 필수! → 서버에서 composer install 안 해도 되게 함
+
 
 ---
 
