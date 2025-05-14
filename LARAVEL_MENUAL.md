@@ -6,6 +6,18 @@ Laravel 8.4, PHP 7.4 기준입니다.
 
 ---
 
+## 📌 사전 준비 사항
+
+1. AWS EC2 인스턴스 생성 (Amazon Linux 2 이상)
+2. EC2에 퍼블릭 도메인 연결 (예: yourdomain.com)
+3. AWS 보안 그룹에서 **80 (HTTP)**, **443 (HTTPS)** 포트 허용
+4. Laravel 프로젝트는 아래 조건을 만족해야 함:
+   - `vendor/` 디렉터리 포함 (composer install 완료됨)
+   - `public/` 디렉터리 내 자산 포함 (프론트 자산 빌드 완료됨)
+   - `.env` 파일 포함 (서버 환경에 맞게 설정됨)
+
+---
+
 ## 1. Laravel 프로젝트 압축 및 EC2 업로드
 
 ### ✅ 로컬에서 프로젝트 압축
